@@ -4,6 +4,26 @@
 //
 //  Created by Jon Salkin on 7/9/23.
 //
+/*
+ This file defines the `Room` class, which represents a room containing furniture objects.
+
+ The `Room` class conforms to the `Codable` protocol, allowing instances of the class to be encoded and decoded to and from a property list format.
+
+ The properties of the `Room` class include:
+
+ - `name`: A `String` representing the name of the room.
+ - `furniture`: An array of `Furniture` objects representing the furniture in the room.
+
+ The `Room` class also has an initializer that allows you to initialize a `Room` object with a name and an array of furniture objects.
+
+ Additionally, the `Room` class includes static properties and methods for managing the persistence of room data.
+ The `archiveURL` property defines the URL where the room data will be stored as a property list.
+ The `sampleRooms` property provides a set of sample rooms for testing purposes.
+ The `saveToFile(room:)` method is used to encode and save room data to the specified archive URL,
+ and the `loadFromFile()` method is used to load and decode room data from the archive URL.
+
+ Overall, the `Room` class provides a way to represent rooms with associated furniture objects and offers methods for persisting and retrieving room data.
+ */
 
 import Foundation
 

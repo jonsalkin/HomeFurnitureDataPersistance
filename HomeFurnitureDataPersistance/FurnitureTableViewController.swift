@@ -4,6 +4,32 @@
 //
 //  Created by Jon Salkin on 7/9/23.
 //
+/*
+ This file defines the `FurnitureTableViewController` class, which is a subclass of `UITableViewController`.
+ It acts as the table view controller responsible for displaying the furniture data.
+
+ The properties and methods defined in the `FurnitureTableViewController` class include:
+
+ - `PropertyKeys`: A struct that defines a property for the table view cell reuse identifier.
+
+ - `rooms`: An array of `Room` objects representing the rooms and associated furniture.
+ The initial value is set to a predefined array of sample rooms.
+ The `didSet` property observer is used to save the updated room data to disk whenever the `rooms` array is modified.
+
+ - `viewDidLoad()`: This method is called when the view controller's view is loaded.
+ It checks if there is any saved room data available and loads it if present.
+ Otherwise, it initializes the `rooms` array with the sample rooms.
+
+ - `viewWillDisappear(_:)`: This method is called when the view controller's view is about to disappear.
+ It saves the current room data to disk.
+
+ - Table view data source methods: The table view data source methods are implemented to provide the necessary data for displaying the rooms and furniture in the table view.
+
+ - `showFurnitureDetail(_:sender:)`: This IBAction method is triggered when a table view cell is selected.
+ It retrieves the selected room and furniture, and prepares the `FurnitureDetailViewController` for presentation.
+
+ Overall, the `FurnitureTableViewController` class handles the display and management of the furniture data in the table view, including loading and saving the data to disk.
+ */
 
 import UIKit
 
